@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Proudact from './component';
 
-function App() {
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App row">
+      <Proudact
+        name="Shampoo"
+        price={12}
+        category="Hair "
+        imgUrl="https://www.dove.com/content/dam/unilever/dove/united_states_of_america/pack_shot/079400458018.01-30858167-png.png"
+      />
+      <Proudact
+        name="Shirt"
+        price={11}
+        category="Clothing"
+        imgUrl="https://hollywoodchamber.net/wp-content/uploads/2020/06/tshirt-2.jpg"
+      />
+      <Proudact
+        name="Ball"
+        price={5}
+        category="Games"
+        imgUrl="https://www.elgato.com/themes/custom/smalcode/image/products/screen-link/monitor-mask.png"
+      />
     </div>
   );
 }
